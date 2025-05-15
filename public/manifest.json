@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Test",
+  "description": "Test chrome extension",
+  "version": "1.0.0",
+  "permissions": ["storage", "tabs", "activeTab", "identity", "windows"],
+  "icons": {
+    "192": "assets/logo192.png"
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "192": "assets/logo192.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"],
+      "css": ["assets/style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

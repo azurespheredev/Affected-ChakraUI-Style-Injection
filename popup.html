@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Chrome Extension</title>
+    <link rel="shortcut icon" href="/assets/logo192.png" type="image/x-icon" />
+    <style>
+      @font-face {
+        font-family: "Plus Jakarta Sans";
+        src: url("/assets/PlusJakartaSans-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      html,
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        margin: 0;
+      }
+
+      #chrome-extension-popup {
+        width: 280px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chrome-extension-popup"></div>
+    <script type="module" src="/src/popup.tsx"></script>
+  </body>
+</html>
