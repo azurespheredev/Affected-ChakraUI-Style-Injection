@@ -5,7 +5,7 @@ export default function ContentPage() {
     <Flex direction={"column"} justify={"center"} align={"center"} gap={4} p={4}>
       <Text>{"Example Content Page"}</Text>
 
-      <Button>{"Click Me"}</Button>
+      <Button w={"full"}>{"Click Me"}</Button>
     </Flex>
   );
 }
